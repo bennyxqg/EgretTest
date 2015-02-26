@@ -1,4 +1,8 @@
-﻿module UIDemo {
+﻿/**
+ * Author by daz2yy
+ * Create at 2015-2-26
+ */
+module UIDemo {
     export class TestProgress extends egret.gui.Group {
         public constructor() {
             super();

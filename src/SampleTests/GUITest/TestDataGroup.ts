@@ -1,4 +1,8 @@
-﻿module UIDemo {
+﻿/**
+ * Author by daz2yy
+ * Create at 2015-2-26
+ */
+module UIDemo {
     /*
         1.您自定义的ItemRenderer，应该继承egret.gui.ItemRenderer，然后在内部添加您自定义的功能
         2.将数据对应到显示的语句，应该放在dataChanged方法中，当数据改变并且皮肤已经创建完毕的情况下这个方法会被执行。

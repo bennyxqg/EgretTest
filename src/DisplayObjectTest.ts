@@ -2,7 +2,7 @@
  * Author by daz2yy
  * Create at 2015-2-26
  */
-class GUITest extends egret.DisplayObjectContainer {
+class DisplayObjectTest extends egret.DisplayObjectContainer {
     public constructor() {
         super();
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
@@ -37,7 +37,6 @@ class GUITest extends egret.DisplayObjectContainer {
     }
     private gameLayer: egret.DisplayObjectContainer;
 
-    private guiLayer: egret.gui.UIStage;
     /**
      * 创建场景界面
      */
@@ -50,42 +49,11 @@ class GUITest extends egret.DisplayObjectContainer {
         bitmap.texture = RES.getRes("bgImage");
         this.gameLayer.addChild(bitmap);
 
-        //GUI的组件必须都在这个容器内部,UIStage会始终自动保持跟舞台一样大小。
-        this.guiLayer = new egret.gui.UIStage();
-        this.addChild(this.guiLayer);
+        //var test = new DisplayObjectDemo.TestSprite();
+        //var test = new EventTestDemo.TestBaseEvent();
+        var test = new EventTestDemo.TestTouchEvent();
 
-        //this.TestInputLabel();
-
-        //var test = new UIDemo.TestLabel();
-        //var test = new UIDemo.TestButton();
-        //var test = new UIDemo.TestToggleButton();
-        //var test = new UIDemo.TestCheckBox();
-        //var test = new UIDemo.TestRadioButton();
-        //var test = new UIDemo.TestSlider();
-        //var test = new UIDemo.TestProgress();
-        //var test = new UIDemo.TestAlert();
-        //var test = new UIDemo.TestGroup();
-        //var test = new UIDemo.TestPanel();
-        //var test = new UIDemo.TestScroller();
-        var test = new UIDemo.TestDataGroup();
-
-        this.guiLayer.addElement(test)
-    }
-    // test InputLabel
-    private TestInputLabel() {
-        var inputLabel1 = new egret.gui.EditableText();
-        inputLabel1.width = this.guiLayer.width / 2;
-        inputLabel1.touchEnabled = true;
-        inputLabel1.enabled = true;
-        inputLabel1.maxChars = 35;
-        inputLabel1.size = 40;
-        inputLabel1.addEventListener("contentWidth", this.InputLabel_contentWidth, this);
-        inputLabel1.addEventListener("contentHeight", this.InputLabel_contentHeight, this);
-    }
-    private InputLabel_contentWidth(event: egret.Event) {
-        console.log("InputLabel event, contentWidth");
-    }
-    private InputLabel_contentHeight() {
+        this.gameLayer.addChild(test);
     }
 
 }
