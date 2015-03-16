@@ -1,8 +1,8 @@
 ﻿/**
- * Author by daz2yy
- * Create at 2015-2-26
- */
-class DisplayObjectTest extends egret.DisplayObjectContainer {
+* Author by daz2yy
+* Create at 2015-3-16
+*/
+class EventTest extends egret.DisplayObjectContainer {
     public constructor() {
         super();
         this.addEventListener(egret.Event.ADDED_TO_STAGE, this.onAddToStage, this);
@@ -49,9 +49,8 @@ class DisplayObjectTest extends egret.DisplayObjectContainer {
         bitmap.texture = RES.getRes("bgImage");
         this.gameLayer.addChild(bitmap);
 
-        //var test = new DisplayObjectDemo.TestSprite();
-        //var test = new DisplayObjectDemo.TestBitmap();
-        var test = new DisplayObjectDemo.TestScale9Sprite();
+        //var test = new EventTestDemo.TestBaseEvent();
+        var test = new EventTestDemo.TestTouchEvent();
 
         this.gameLayer.addChild(test);
     }
